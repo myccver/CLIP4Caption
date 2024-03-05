@@ -1,2 +1,2 @@
 # clip4caption
-A Simple Baseline Based on CLIP and Transformer for Video Captioning
+The code can be run on three video captioning datasets, including MSVD, MSR-VTT, and VATEX.
