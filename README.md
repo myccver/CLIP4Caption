@@ -12,11 +12,11 @@ First clone this repository
 
 Then, please put [data](https://pan.baidu.com/s/1Ukd7zCFNR6_S0ruqHCNZJA?pwd=1234) and [coco_caption](https://pan.baidu.com/s/1f5QFk8fOlHNM7zJgFBw24w?pwd=1234 ) to the project.
 ## Results
-The checkpoint can be found
+The checkpoint can be found [weight](https://pan.baidu.com/s/1atc2IfFV9OPCFrU2CrLxwA?pwd=1234 )
 | Dataset | BLEU@4 | METEOR | ROUGE-L | CIDEr | Checkpoint |
 |-------|-------|-------|-------|-------|-------|
 | MSVD | 59.5 | 39.6 | 76.3 | 110.4 | msvd_clip14.pth |
-| MSR-VTT | - | - | - | - | msrvtt_clip14.pth |
+| MSR-VTT | 44.0 | 29.9 | 62.6 | 55.3 | msrvtt_clip14.pth |
 | VATEX | 34.2 | 24.1 | 50.5 | 58.3 | vatex_clip14.pth |
 
 
