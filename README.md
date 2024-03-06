@@ -14,7 +14,8 @@ Then, please put [data](https://pan.baidu.com/s/1Ukd7zCFNR6_S0ruqHCNZJA?pwd=1234
 
 ## Training
 ### MSVD
-`python train.py --train_label_h5
+```
+python train.py --train_label_h5
 data/metadata/msvd_train_sequencelabel.h5
 --val_label_h5
 data/metadata/msvd_val_sequencelabel.h5
@@ -98,9 +99,11 @@ output/CLIP14_XE_msvd/msvd_clip14.json
 --vocab_embedding
 data/origin_feature/update_msvd_vocab_whole_ViT-L-14_embedding.pkl
 --input_encoding_size
-768`
+768
+```
 ### MSR-VTT
-`python train.py --train_label_h5
+```
+python train.py --train_label_h5
 data/metadata/msrvtt_train_sequencelabel.h5
 --val_label_h5
 data/metadata/msrvtt_val_sequencelabel.h5
@@ -188,9 +191,11 @@ data/origin_feature/update_msrvtt_vocab_whole_ViT-L-14_embedding.pkl
 --input_encoding_size
 768
 --seed
-1`
+1
+```
 ### VATEX
-`python train.py --train_label_h5
+```
+python train.py --train_label_h5
 data/metadata/vatex_train_sequencelabel.h5
 --val_label_h5
 data/metadata/vatex_val_sequencelabel.h5
@@ -278,4 +283,5 @@ data/origin_feature/update_vatex_vocab_whole_ViT-L-14_embedding.pkl
 --input_encoding_size
 768
 --seed
-1`
+1
+```
