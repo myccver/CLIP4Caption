@@ -91,7 +91,7 @@ INFO
 --use_local
 1
 --model_file
-output/CLIP14_XE_msvd/model_clip14.pth
+output/CLIP14_XE_msvd/msvd_clip14.pth
 --start_from
 No
 --result_file
@@ -271,11 +271,11 @@ INFO
 --use_local
 1
 --model_file
-output/CLIP14_XE_vatex/vatex_clip14_5.pth
+output/CLIP14_XE_vatex/vatex_clip14.pth
 --start_from
 No
 --result_file
-output/CLIP14_XE_vatex/vatex_clip14_5.json
+output/CLIP14_XE_vatex/vatex_clip14.json
 --use_global_local_feature
 1
 --vocab_embedding
