@@ -11,6 +11,14 @@ First clone this repository
 `git clone https://github.com/myccver/Clip4caption.git`
 
 Then, please put [data](https://pan.baidu.com/s/1Ukd7zCFNR6_S0ruqHCNZJA?pwd=1234) and [coco_caption](https://pan.baidu.com/s/1f5QFk8fOlHNM7zJgFBw24w?pwd=1234 ) to the project.
+## Results
+The checkpoint can be found
+| Dataset | BLEU@4 | METEOR | ROUGE-L | CIDEr | Checkpoint |
+|-------|-------|-------|-------|-------|-------|
+| MSVD | 59.5 | 39.6 | 76.3 | 110.4 | msvd_clip14.pth |
+| MSR-VTT | - | - | - | - | msrvtt_clip14.pth |
+| VATEX | 34.2 | 24.1 | 50.5 | 58.3 | vatex_clip14.pth |
+
 
 ## Training
 ### MSVD
@@ -100,6 +108,8 @@ output/CLIP14_XE_msvd/msvd_clip14.json
 data/origin_feature/update_msvd_vocab_whole_ViT-L-14_embedding.pkl
 --input_encoding_size
 768
+--seed
+1
 ```
 ### MSR-VTT
 ```
@@ -280,6 +290,97 @@ output/CLIP14_XE_vatex/vatex_clip14.json
 1
 --vocab_embedding
 data/origin_feature/update_vatex_vocab_whole_ViT-L-14_embedding.pkl
+--input_encoding_size
+768
+--seed
+1
+```
+## Test
+### MSVD
+```
+python test.py --train_label_h5
+data/metadata/msvd_train_sequencelabel.h5
+--val_label_h5
+data/metadata/msvd_val_sequencelabel.h5
+--test_label_h5
+data/metadata/msvd_test_sequencelabel.h5
+--train_cocofmt_file
+data/metadata/msvd_train_cocofmt.json
+--val_cocofmt_file
+data/metadata/msvd_val_cocofmt.json
+--test_cocofmt_file
+data/metadata/msvd_test_cocofmt.json
+--train_bcmrscores_pkl
+data/metadata/msvd_train_evalscores.pkl
+--train_feat_h5
+""
+""
+""
+data/clip_feature/msvd_train_clip14_feats.h5
+--val_feat_h5
+""
+""
+""
+data/clip_feature/msvd_val_clip14_feats.h5
+--test_feat_h5
+""
+""
+""
+data/clip_feature/msvd_test_clip14_feats.h5
+--beam_size
+5
+--rnn_size
+768
+--eval_metric
+CIDEr
+--language_eval
+1
+--max_epochs
+30
+--batch_size
+128
+--test_batch_size
+64
+--learning_rate
+0.0001
+--lr_update
+20
+--save_checkpoint_from
+1
+--num_chunks
+1
+--train_cached_tokens
+data/metadata/msvd_train_ciderdf.pkl
+--use_rl
+0
+--use_mixer
+0
+--mixer_from
+-1
+--use_it
+0
+--dr_baseline_captions
+0
+--dr_baseline_type
+0
+--loglevel
+INFO
+--use_eos
+0
+--use_long_range
+1
+--use_short_range
+1
+--use_local
+1
+--model_file
+output/CLIP14_XE_msvd/msvd_clip14.pth
+--start_from
+No
+--result_file
+output/CLIP14_XE_msvd/msvd_clip14.json
+--vocab_embedding
+data/origin_feature/update_msvd_vocab_whole_ViT-L-14_embedding.pkl
 --input_encoding_size
 768
 --seed
