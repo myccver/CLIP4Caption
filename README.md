@@ -153,11 +153,11 @@ CIDEr
 --max_epochs
 30
 --batch_size
-64
+128
 --test_batch_size
 64
 --learning_rate
-0.00005
+0.0001
 --lr_update
 20
 --save_checkpoint_from
