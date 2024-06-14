@@ -1,4 +1,4 @@
-# Clip4caption
+# Video-Captioner-Transformer
 The code can be run on three video captioning datasets, including MSVD, MSR-VTT, and VATEX.
 ## Dependencies
 - Python 3.7
