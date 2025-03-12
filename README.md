@@ -1,4 +1,5 @@
-# Video-Captioner-Transformer
+# CLIP4Caption
+### Please note that our method differs from <<CLIP4Caption: CLIP for Video Caption>> (ACMMM 2021). Instead of using a CLIP model fine-tuned via video-text retrieval, we directly utilize the original CLIP for feature extraction.
 The code can be run on three video captioning datasets, including MSVD, MSR-VTT, and VATEX.
 ## Dependencies
 - Python 3.7
